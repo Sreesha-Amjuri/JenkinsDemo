@@ -3,7 +3,7 @@ Pipeline {
     Stages{
         Stage(Build)
         Sh ''' 
-        echo "Hello World from Jenkins"
+        echo "Hello World from JenkinsFile"
         '''
     }
 
