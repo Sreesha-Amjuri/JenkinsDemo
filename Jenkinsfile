@@ -2,7 +2,7 @@ Pipeline {
     Agent any
     Stages{
         Stage(Build)
-        Sh ''' 
+        sh ''' 
         echo "Hello World from JenkinsFile"
         '''
     }
