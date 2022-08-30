@@ -1,7 +1,7 @@
-Pipeline {
+pipeline {
     agent any
-    Stages{
-        Stage(Build)
+    stages{
+        stage(Build)
         sh ''' 
         echo "Hello World from JenkinsFile with a webhook"
         '''
