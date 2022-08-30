@@ -3,7 +3,7 @@ Pipeline {
     Stages{
         Stage(Build)
         sh ''' 
-        echo "Hello World from JenkinsFile"
+        echo "Hello World from JenkinsFile with a webhook"
         '''
     }
 
