@@ -14,7 +14,7 @@ pipeline {
             steps{
                 sh '''
                  pwd 
-                  docker build -t application  .
+                  docker build -t application-${currentBuild.number}  .
                 '''
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps{
                 sh '''
                  pwd
-                 docker run -d application 
+                 docker run -d application-${currentBuild.number}
                 '''
             }
         }
