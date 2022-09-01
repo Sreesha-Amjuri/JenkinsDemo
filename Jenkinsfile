@@ -25,6 +25,11 @@ pipeline {
                 '''
             }
         }
+          stage("Workspace Cleanup"){
+            steps{
+                [$class: 'WsCleanup']               
+            }
+        }    
     }
 
 }
