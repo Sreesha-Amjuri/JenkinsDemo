@@ -17,7 +17,7 @@ pipeline {
                  #!/bin/bash
                  pwd 
                  whoami
-                 docker build -t application-"${BUILD_NUMBER}" Dockerfile
+                 docker build -t application-"${BUILD_NUMBER}" 
                 '''
             }
         }
