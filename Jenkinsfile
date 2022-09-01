@@ -9,6 +9,21 @@ pipeline {
                 '''
             }
         }
+         stage("Script stage"){
+            steps{
+                sh ''' 
+                 chmod +x sample.sh
+                 ./sample.sh >time.txt
+                '''
+            }
+        }
+          stage("Artifact stage"){
+            steps{
+                sh ''' 
+                 cat time.txt
+                '''
+            }
+        }
     }
 
 }
