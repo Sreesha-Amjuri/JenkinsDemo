@@ -17,7 +17,7 @@ pipeline {
             steps{
                 sh '''
                  pwd 
-                  docker build -t application-${env.BUILD_NUMBER} .
+                  docker build -t application-"${env.BUILD_NUMBER}" .
                 '''
             }
         }
@@ -25,7 +25,7 @@ pipeline {
             steps{
                 sh '''
                  pwd
-                 docker run -d application-${env.BUILD_NUMBER}
+                 docker run -d application-"${env.BUILD_NUMBER}"
                 '''
             }
         }
