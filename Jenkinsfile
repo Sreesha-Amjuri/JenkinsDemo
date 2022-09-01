@@ -11,14 +11,16 @@ pipeline {
         }
          stage("Docker build"){
             steps{
-                sh ''' 
+                sh '''
+                 pwd 
                   docker build -t application  .
                 '''
             }
         }
           stage("Container Creation"){
             steps{
-                sh ''' 
+                sh '''
+                 pwd
                  docker run -d application 
                 '''
             }
