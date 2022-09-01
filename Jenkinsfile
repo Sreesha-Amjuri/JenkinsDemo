@@ -28,7 +28,10 @@ pipeline {
         }
           stage("Workspace Cleanup"){
             steps{
-                           
+                   sh '''
+                   echo "Pipeline finshed executing" 
+                   
+                   '''
             }
         }    
     }
