@@ -3,6 +3,7 @@ pipeline {
     stages{
         stage("Build stage"){
             steps{
+                cleanWs()
                 sh ''' 
                 echo "Hello World from Jenkinsfile with a webhook"
                 echo " What else we can do "
