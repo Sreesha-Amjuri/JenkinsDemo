@@ -5,7 +5,7 @@ pipeline {
             steps{
                 sh ''' 
                 echo "Hello World from Jenkinsfile with a webhook"
-                ehco " What else we can do "
+                echo " What else we can do "
                 '''
             }
         }
