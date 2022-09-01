@@ -17,7 +17,7 @@ pipeline {
             steps{
                 sh '''
                  pwd 
-                  docker build -t application-${env.BUILD_NUMBER}
+                  docker build -t application-${env.BUILD_NUMBER} .
                 '''
             }
         }
