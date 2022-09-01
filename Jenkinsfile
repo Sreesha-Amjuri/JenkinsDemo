@@ -1,5 +1,8 @@
 pipeline {
     agent {label 'centos7'}
+    environment {
+       BUILD_NUMBER = ${currentBuild.number}
+     }
     stages{
         stage("Build stage"){
             steps{
@@ -14,7 +17,7 @@ pipeline {
             steps{
                 sh '''
                  pwd 
-                  docker build -t application-${currentBuild.number}  .
+                  docker build -t application-$BUILD_NUMBER
                 '''
             }
         }
@@ -22,7 +25,7 @@ pipeline {
             steps{
                 sh '''
                  pwd
-                 docker run -d application-${currentBuild.number}
+                 docker run -d application-$BUILD_NUMBER
                 '''
             }
         }
