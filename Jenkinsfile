@@ -16,6 +16,7 @@ pipeline {
          stage("Docker build"){
             steps{
                 sh '''
+                 #!/bin/bash
                  pwd 
                   docker build -t application-"${env.BUILD_NUMBER}" .
                 '''
@@ -24,6 +25,7 @@ pipeline {
           stage("Container Creation"){
             steps{
                 sh '''
+                 #!/bin/bash
                  pwd
                  docker run -d application-"${env.BUILD_NUMBER}"
                 '''
