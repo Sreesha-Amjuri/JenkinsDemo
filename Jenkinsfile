@@ -9,18 +9,17 @@ pipeline {
                 '''
             }
         }
-         stage("Script stage"){
+         stage("Docker build"){
             steps{
                 sh ''' 
-                 chmod +x sample.sh
-                 ./sample.sh >time.txt
+                  docker build -t application  .
                 '''
             }
         }
-          stage("Artifact stage"){
+          stage("Container Creation"){
             steps{
                 sh ''' 
-                 cat time.txt
+                 docker run -d application 
                 '''
             }
         }
