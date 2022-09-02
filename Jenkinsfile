@@ -26,7 +26,7 @@ pipeline {
                 sh '''
                  #!/bin/bash
                  pwd
-                 docker run -d application:"${BUILD_NUMBER}"
+                 docker run -p 8082:8080 -d application:"${BUILD_NUMBER}"
                 '''
             }
         }
