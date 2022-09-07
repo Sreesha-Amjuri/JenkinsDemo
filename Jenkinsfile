@@ -27,7 +27,7 @@ pipeline {
                  #!/bin/bash
                  pwd
                  old=$(docker ps | grep -i 8082 | awk {'print $1'})
-                 docker kill $old
+                 docker kill ${old}
                  docker run -p 8082:8080 -d application:"${BUILD_NUMBER}"
                 '''
             }
