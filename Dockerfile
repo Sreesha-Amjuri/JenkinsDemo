@@ -8,4 +8,4 @@ RUN mv /usr/local/tomcat/webapps/host-manager/META-INF/context.xml /usr/local/to
 ADD context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
 ADD context.xml /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
 ADD tomcat-users.xml conf/tomcat-users.xml
-ADD pharmacy1.war /usr/local/tomcat/webapps
+ADD *.war /usr/local/tomcat/webapps
